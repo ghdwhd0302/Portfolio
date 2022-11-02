@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'twayair';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -8,14 +8,15 @@
 :root {
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-redwhite: #b7acac;
     --color-green: rgb(3, 35, 3);
-    --color-lightgreen: rgb(82, 165, 82);
+    --color-lightgreen: rgb(72, 99, 72);
 
-    --font-large: 48px;
-    --font-medium: 28px;
-    --font-regular: 18px;
-    --font-small: 16px;
-    --font-micro: 14px;
+    --font-large: 52px;
+    --font-medium: 33px;
+    --font-regular: 22px;
+    --font-small: 19px;
+    --font-micro: 16px;
 
     --size-border-radius: 4px;
 
@@ -27,7 +28,7 @@
 }
 
 body {
-    font-family: 'twayair', sans-serif;
+    font-family: 'GangwonEdu_OTFBoldA', sans-serif;
     margin: 0;
 }
 
@@ -89,7 +90,11 @@ p {
 .navbar__logo {
     font-size: var(--font-medium);
     font-weight: bold;
-    color: white;
+    color: var(--color-redwhite);
+}
+
+.navbar__logo > a {
+    color: var(--color-redwhite);
 }
 
 .navbar__menu {
@@ -99,17 +104,17 @@ p {
 .navbar__menu__item{
     padding: 8px 12px;
     margin: 0 4px;
-    color: var(--color-white);
+    color: var(--color-redwhite);
     cursor: pointer;
 }
 
 .navbar__menu__item.active {
-    border: 1px solid white;
+    border: 1px solid var(--color-redwhite);
     border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
-    background-color: var(--color-lightgreen);
+    background-color:var(--color-lightgreen);
     border-radius: var(--size-border-radius);
 }
 
@@ -133,19 +138,64 @@ p {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-redwhite);
 }
 
 .home__title, .home__description {
-    color: var(--color-white);
+    color: var(--color-redwhite);
 }
 
 .home__contact {
-    color: var(--color-white);
+    color: var(--color-redwhite);
     font-size: var(--font-regular);
     font-weight: bold;
     margin: 24px;
     padding: 8px 12px;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-redwhite);
     border-radius: var(--size-border-radius);
+    font-family: 'GangwonEdu_OTFBoldA', sans-serif;
+}
+
+.home__contact:hover {
+    background-color: var(--color-redwhite);
+    color: #000000;
+    font-family: 'GangwonEdu_OTFBoldA', sans-serif;
+}
+
+.section {
+    padding: 50px;
+    text-align: center; 
+    margin: auto;
+}
+
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about__majors {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+} 
+
+.major__icon {
+    width: 170px;
+    height: 170px;
+    line-height: 195px;
+    font-size: 70px;
+    margin: auto;
+    color: var(--color-lightgreen);
+    border: 1px solid var(--color-lightgreen);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.major__icon i {
+    transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+    color: var(--color-green);
+    transform: rotate(-30deg) scale(1.1);
 }
