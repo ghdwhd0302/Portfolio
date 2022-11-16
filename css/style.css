@@ -14,6 +14,7 @@
     --color-greenyello: rgb(165, 177, 135);
     --color-grey: #3f3a3c;
     --color-orange: #fed546;
+    --color-deepgreen: rgb(1, 17, 1);
 
     --font-large: 52px;
     --font-medium: 33px;
@@ -83,11 +84,20 @@ p {
 /* Navbar */
 
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
     background-color: var(--color-green);
+    z-index: 1;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--bold {
+    background-color: var(--color-deepgreen);
+    padding: 10px;
 }
 
 .navbar__logo {
@@ -460,6 +470,36 @@ p {
     transform: scale(1.1);
     color: var(--color-lightgreen);
 }
+
+/* .arrow-up {
+    display: none;
+} */
+
+.arrow-up {
+    bottom: 50px;
+    right: 50px;
+    position: fixed;
+    font-size: 50px;
+    /* padding: 10px; */
+    color: var(--color-white);
+    background-color: var(--color-green);
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* .fa-angles-up {
+    font-size: 33px;
+    padding: 10px;
+} */
 
 /*  미디어 스크린  */
 @media screen and (max-width: 768px){
